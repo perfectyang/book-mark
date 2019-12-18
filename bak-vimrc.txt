@@ -1,0 +1,37 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+call vundle#end()
+filetype plugin indent on
+
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+syntax on
+set nu
+let mapleader=","
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q!<CR>
+nmap <Leader>l $
+nmap <Leader>j ^
+" 跳转
+set ts=2
+set expandtab
+set autoindent
+nnoremap <C-j> <C-w>h
+nnoremap <C-k> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nmap I 3i
+nmap K 3k
+noremap i k
+noremap k j
+noremap j h
+noremap a i
+set incsearch
+set ignorecase
+noremap <Leader><space> :nohlsearch<CR>
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
