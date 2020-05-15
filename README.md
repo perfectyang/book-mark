@@ -16,3 +16,14 @@ git checkout -b branch_name tag_name 这样会从 tag 创建一个分支，然�
 git tag xxxx 
 git checkout -b branch_name tag_name
 这样会从 tag 创建一个分支，然后就和普通的 git 操作一样了
+
+
+遗漏文件提交到之前 commit 上
+git add xxxx // xxx 为遗漏提交文件
+git commit --amend --no-edit
+
+丢弃修改暂存区的内容
+// 把暂存区的修改撤销掉（unstage），重新放回工作区。
+git reset HEAD <文件名>
+// 丢弃工作区的修改
+git checkout -- <文件名>
