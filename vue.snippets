@@ -1,0 +1,153 @@
+snippet vs
+<template>
+<div class="${1}"></div>
+</template>
+<script>
+export default {
+	name: '${1}',
+	data () {
+	  return {
+		}	
+	}
+}
+</script>
+<style lang="less" scoped>
+.${1} {}
+</style>
+endsnippet
+
+snippet vc
+created () {
+	${0}
+}
+endsnippet
+
+snippet vm
+mounted () {
+	${0}
+},
+endsnippet
+
+snippet vw
+watch: {
+  ${1} () {}
+},
+endsnippet
+
+snippet vwd
+watch: {
+	${0}: {
+		handler (value, oldValue) {
+
+		},
+	  deep: true,
+		immediate: true
+	}
+},
+endsnippet
+
+snippet vcmp
+components: {
+	${1}
+},
+endsnippet
+
+snippet vprops
+props: {
+  ${1}: {
+		type: Object,
+		default: () => ({})
+	}
+},
+endsnippet
+
+snippet foreach
+${0}.forEach((val, idx) => {
+
+})
+endsnippet
+
+snippet tick
+this.nextTick(_ => {
+	${0}	
+})
+endsnippet
+
+snippet "([^\s]\w+)\.log" "clg" r
+console.log($0`!p snip.rv = match.group(1)`)
+endsnippet
+
+snippet json
+JSON.parse(JSON.stringify($0))
+endsnippet
+
+snippet "fn\.([^\s]\w+)\.(\w+)" "fn.name" r
+function `!p snip.rv = match.group(1)` (`!p snip.rv = match.group(2)`) {
+	$0
+}
+endsnippet
+
+snippet "const\.([^\s]\w+)\.(\w+)" "fn.name" r
+const `!p snip.rv = match.group(1)` = (`!p snip.rv = match.group(2)`) => {
+	$0
+}
+endsnippet
+
+snippet "([^\s]\w+)\(\)" "fn()" r
+`!p snip.rv = match.group(1)` () {
+	$0
+}
+endsnippet
+
+snippet clear "clear both" b
+.clear:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+endsnippet
+
+snippet clear "clear both" b
+.clear:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+endsnippet
+
+snippet flex "flex" b
+display: flex;
+justify-content: center;
+align-items: center;
+endsnippet
+
+snippet vf "vf" b
+<template v-for="(${1:item}, idx) in ${0}" :key="idx"></template>
+endsnippet
+
+snippet bg "bg" i
+background-color: ${1:#fff};
+endsnippet
+
+snippet if "Description" b
+if (${1}) {
+
+}
+endsnippet
+
+snippet ifelse "Description" b
+if (${1}) {
+
+} else {
+
+}
+endsnippet
+
+snippet swh "Description" b
+switch ($0) {
+	case value:
+		break
+	default:
+		break
+}
+endsnippet
