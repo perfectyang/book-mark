@@ -1,0 +1,125 @@
+{
+  "React-arrow-function-component": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "rac",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface IProps {}",
+      "const ${1:Index}: React.FC<IProps> = ({",
+      "  ",
+      "}) => {",
+      "  return (",
+      "    <>",
+      "      <h1>${1:Index}</h1>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:Index};",
+      ""
+    ],
+    "description": "React函数组件默认模版"
+  },
+  "React-fragment": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "rf",
+    "body": ["<>", "  ${1}", "</>"],
+    "description": "React-Fragment"
+  },
+  "React-loop": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "mp",
+    "body": [
+      "<>",
+      "  {",
+      "    ${1:Index}.map((${2:item}, idx) => (",
+      "     <>",
+      "       ${2:item}",
+      "     </>",
+      "    ))",
+      "  }",
+      "</>"
+    ],
+    "description": "React-map"
+  },
+  "React-interface": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "inter",
+    "body": ["interface I${1} {", "  ${2}", "}"],
+    "description": "React-interface"
+  },
+  "React-type": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "type",
+    "body": ["export type I${1} = {", "  ${2}", "}"],
+    "description": "React-type"
+  },
+  "sty": {
+    "prefix": "sty",
+    "body": ["import styles from './index.less';"],
+    "description": "Create a style"
+  },
+  "import": {
+    "prefix": "imp",
+    "body": ["import $2 from '$1';"],
+    "description": "Create a import"
+  },
+  "React-useCallback-function": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "cb",
+    "body": ["const ${1} = React.useCallback(() => {", " ", "}, [${2}])"],
+    "description": "React-Fragment"
+  },
+  "React-Fragement": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "rf",
+    "body": ["<>", "  ${1}", "</>"],
+    "description": "React-Fragment"
+  },
+  "arrow-function": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "fa",
+    "body": ["const ${1} = (${2}) => {", "  ", "}"],
+    "description": "React-Fragment"
+  },
+  "normal-function": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "fc",
+    "body": ["function ${1:Index} (${2}) {", "  ", "}"],
+    "description": "normal-function"
+  },
+  "classname": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "cls",
+    "body": ["import cs from 'classnames';"],
+    "description": "import classnames as cs"
+  },
+  "ant": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "ant",
+    "body": ["import { ${1} } from 'antd';"],
+    "description": "import antd "
+  },
+  "efc": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "efc",
+    "body": ["interface props {}",
+    "export function ${1:Index} (p: props): React.ReactNode {",
+    " return <>${1}</>",
+    "}"
+    ],
+    "description": "genrate efc function component"
+  },
+  "fake": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "efc",
+    "body": ["interface props {}",
+    "export function ${1:Index} (p: props): React.ReactNode {",
+    " return <>${1}</>",
+    "}"
+    ],
+    "description": "genrate efc function component"
+  },
+}
+
