@@ -1,0 +1,7 @@
+sudo vim /etc/resolv.conf
+
+sudo vim /etc/systemd/resolved.conf
+DNS=8.8.8.8 114.114.114.114 172.26.9.10 172.25.9.10
+
+sudo systemctl restart systemd-resolved.service
+sudo systemctl enable systemd-resolved.service
